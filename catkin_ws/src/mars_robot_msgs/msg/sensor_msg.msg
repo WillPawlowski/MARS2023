@@ -1,0 +1,3 @@
+uint16 auger_depth
+float32 auger_accel_z
+float32 auger_accel_x

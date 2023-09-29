@@ -1,0 +1,80 @@
+#This file is used to define all of the global parameters referenced by all the nodes of the robot.
+#Parameters only need to be changes here for them to take impact across all nodes
+
+mars_robot:
+  #Serial Numbers:
+  serial_nums:
+    depth_stepper: "00320097"
+    pitch_stepper: "00320100"
+    auger_odrive: "207B37943548"
+    loco_odrive: "20863880304E"
+  
+  #Ports:
+  ports:
+    roboclaw_port: '/dev/ttyACM2'
+    #arduino_port: must be defined in mars_robot_launch.launch file
+
+  #Manual Control Keybindings:
+  manual_control_keys:
+    #Locomotion
+    loco_forward_key: 'w'
+    loco_left_key: 'a'
+    loco_backward_key: 's'
+    loco_right_key: 'd'
+    loco_stop_key: ' '
+    #Auger
+    auger_dig_key: 'm'
+    auger_stop_key: ','
+    auger_reverse_key: '.'
+    #Pitch
+    pitch_increase_fast_key: 'h'
+    pitch_increase_slow_key: 'j'
+    pitch_stop_key: 'k'
+    pitch_decrease_slow_key: 'l'
+    pitch_decrease_fast_key: ';'
+    #Depth
+    depth_increase_fast_key: 'y'
+    depth_increase_slow_key: 'u'
+    depth_stop_key: 'i'
+    depth_decrease_slow_key: 'o'
+    depth_decrease_fast_key: 'p'
+    #Dumpa
+    dumpa_extend_key: '7'
+    dumpa_stop_key: '8'
+    dumpa_retract_key: '9'
+    #Vibrator
+    vibrator_on_key: '['
+    vibrator_off_key: ']'
+    #Start Autonomy
+    digging_auto_start: '1'
+    dumping_auto_start: '2'
+    loco_auto_start: '3'
+    digging_auto_up: '4'
+    #Stop All Autonomy
+    auto_stop: 'z'
+    
+  
+  diagnostic_values:
+    #Print Motor Data 
+    #(Dummy variable used by teleop for sending message to print current/speeds)
+    print_motor_data: '' 
+    print_interval: 0.01
+
+
+  
+  #Motor Speeds (Negative values arefor mathcing keybindings)
+  motor_speeds:
+    loco_left_speed: 66.67      #turns/s       (Limit: 0-66.67)
+    loco_right_speed: 66.67     #turns/s       (Limit: 0-66.67)
+    auger_speed: -16.00         #turns/s       (Limit: 0-16.67)
+    pitch_speed_slow: 1000000        #microsteps/s  (Limit: *set using ticgui)
+    pitch_speed_fast: 2000000        #microsteps/s  (Limit: *set using ticgui)
+    depth_speed_slow: 2000000        #microsteps/s  (Limit: *set using ticgui)
+    depth_speed_fast: 6000000        #microsteps/s  (Limit: *set using ticgui) 
+    dumpa_speed: 127            #unkown        (Limit: 0-127)
+
+    
+
+
+
+  

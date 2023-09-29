@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mars/Documents/GitHub/MARS-Lunabotics-2022/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/william/MARS2023/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mars/Documents/GitHub/MARS-Lunabotics-2022/catkin_ws/build
+CMAKE_BINARY_DIR = /home/william/MARS2023/catkin_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,16 +80,17 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -123,28 +124,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # The main all target
 all: cmake_check_build_system
-	cd /home/mars/Documents/GitHub/MARS-Lunabotics-2022/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mars/Documents/GitHub/MARS-Lunabotics-2022/catkin_ws/build/CMakeFiles /home/mars/Documents/GitHub/MARS-Lunabotics-2022/catkin_ws/build/mars_robot/CMakeFiles/progress.marks
-	cd /home/mars/Documents/GitHub/MARS-Lunabotics-2022/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mars_robot/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mars/Documents/GitHub/MARS-Lunabotics-2022/catkin_ws/build/CMakeFiles 0
+	cd /home/william/MARS2023/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/william/MARS2023/catkin_ws/build/CMakeFiles /home/william/MARS2023/catkin_ws/build/mars_robot/CMakeFiles/progress.marks
+	cd /home/william/MARS2023/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mars_robot/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/william/MARS2023/catkin_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/mars/Documents/GitHub/MARS-Lunabotics-2022/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mars_robot/clean
+	cd /home/william/MARS2023/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mars_robot/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +143,67 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/mars/Documents/GitHub/MARS-Lunabotics-2022/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mars_robot/preinstall
+	cd /home/william/MARS2023/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mars_robot/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/mars/Documents/GitHub/MARS-Lunabotics-2022/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mars_robot/preinstall
+	cd /home/william/MARS2023/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mars_robot/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/mars/Documents/GitHub/MARS-Lunabotics-2022/catkin_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/william/MARS2023/catkin_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
+mars_robot/CMakeFiles/tests.dir/rule:
+	cd /home/william/MARS2023/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mars_robot/CMakeFiles/tests.dir/rule
+.PHONY : mars_robot/CMakeFiles/tests.dir/rule
+
+# Convenience name for target.
+tests: mars_robot/CMakeFiles/tests.dir/rule
+
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	cd /home/william/MARS2023/catkin_ws/build && $(MAKE) -f mars_robot/CMakeFiles/tests.dir/build.make mars_robot/CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
+# Convenience name for target.
+mars_robot/CMakeFiles/run_tests.dir/rule:
+	cd /home/william/MARS2023/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mars_robot/CMakeFiles/run_tests.dir/rule
+.PHONY : mars_robot/CMakeFiles/run_tests.dir/rule
+
+# Convenience name for target.
+run_tests: mars_robot/CMakeFiles/run_tests.dir/rule
+
+.PHONY : run_tests
+
+# fast build rule for target.
+run_tests/fast:
+	cd /home/william/MARS2023/catkin_ws/build && $(MAKE) -f mars_robot/CMakeFiles/run_tests.dir/build.make mars_robot/CMakeFiles/run_tests.dir/build
+.PHONY : run_tests/fast
+
+# Convenience name for target.
+mars_robot/CMakeFiles/download_extra_data.dir/rule:
+	cd /home/william/MARS2023/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mars_robot/CMakeFiles/download_extra_data.dir/rule
+.PHONY : mars_robot/CMakeFiles/download_extra_data.dir/rule
+
+# Convenience name for target.
+download_extra_data: mars_robot/CMakeFiles/download_extra_data.dir/rule
+
+.PHONY : download_extra_data
+
+# fast build rule for target.
+download_extra_data/fast:
+	cd /home/william/MARS2023/catkin_ws/build && $(MAKE) -f mars_robot/CMakeFiles/download_extra_data.dir/build.make mars_robot/CMakeFiles/download_extra_data.dir/build
+.PHONY : download_extra_data/fast
+
+# Convenience name for target.
 mars_robot/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/mars/Documents/GitHub/MARS-Lunabotics-2022/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mars_robot/CMakeFiles/_catkin_empty_exported_target.dir/rule
+	cd /home/william/MARS2023/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mars_robot/CMakeFiles/_catkin_empty_exported_target.dir/rule
 .PHONY : mars_robot/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
@@ -179,8 +213,38 @@ _catkin_empty_exported_target: mars_robot/CMakeFiles/_catkin_empty_exported_targ
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	cd /home/mars/Documents/GitHub/MARS-Lunabotics-2022/catkin_ws/build && $(MAKE) -f mars_robot/CMakeFiles/_catkin_empty_exported_target.dir/build.make mars_robot/CMakeFiles/_catkin_empty_exported_target.dir/build
+	cd /home/william/MARS2023/catkin_ws/build && $(MAKE) -f mars_robot/CMakeFiles/_catkin_empty_exported_target.dir/build.make mars_robot/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
+
+# Convenience name for target.
+mars_robot/CMakeFiles/clean_test_results.dir/rule:
+	cd /home/william/MARS2023/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mars_robot/CMakeFiles/clean_test_results.dir/rule
+.PHONY : mars_robot/CMakeFiles/clean_test_results.dir/rule
+
+# Convenience name for target.
+clean_test_results: mars_robot/CMakeFiles/clean_test_results.dir/rule
+
+.PHONY : clean_test_results
+
+# fast build rule for target.
+clean_test_results/fast:
+	cd /home/william/MARS2023/catkin_ws/build && $(MAKE) -f mars_robot/CMakeFiles/clean_test_results.dir/build.make mars_robot/CMakeFiles/clean_test_results.dir/build
+.PHONY : clean_test_results/fast
+
+# Convenience name for target.
+mars_robot/CMakeFiles/doxygen.dir/rule:
+	cd /home/william/MARS2023/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mars_robot/CMakeFiles/doxygen.dir/rule
+.PHONY : mars_robot/CMakeFiles/doxygen.dir/rule
+
+# Convenience name for target.
+doxygen: mars_robot/CMakeFiles/doxygen.dir/rule
+
+.PHONY : doxygen
+
+# fast build rule for target.
+doxygen/fast:
+	cd /home/william/MARS2023/catkin_ws/build && $(MAKE) -f mars_robot/CMakeFiles/doxygen.dir/build.make mars_robot/CMakeFiles/doxygen.dir/build
+.PHONY : doxygen/fast
 
 # Help Target
 help:
@@ -190,12 +254,16 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... test"
-	@echo "... list_install_components"
-	@echo "... edit_cache"
-	@echo "... _catkin_empty_exported_target"
-	@echo "... rebuild_cache"
 	@echo "... install"
+	@echo "... list_install_components"
+	@echo "... tests"
+	@echo "... edit_cache"
+	@echo "... run_tests"
+	@echo "... rebuild_cache"
+	@echo "... download_extra_data"
+	@echo "... _catkin_empty_exported_target"
+	@echo "... clean_test_results"
+	@echo "... doxygen"
 .PHONY : help
 
 
@@ -207,6 +275,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/mars/Documents/GitHub/MARS-Lunabotics-2022/catkin_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/william/MARS2023/catkin_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

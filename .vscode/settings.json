@@ -2,5 +2,6 @@
     "python.analysis.extraPaths": [
         "./Roboclaw"
     ],
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": false,
+    "cmake.sourceDirectory": "/wsl.localhost/Ubuntu-18.04/home/william/MARS2023/catkin_ws/src"
 }

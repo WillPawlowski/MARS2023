@@ -17,26 +17,26 @@ class Digging_Locomotion_WrapperROS:
 
     def __init__(self):
         #Get driver serial numbers:
-        depth_SN = rospy.get_param('/mars_robot/serial_nums/depth_stepper') #Depth tic36v4 stepper driver serial number
+        #depth_SN = rospy.get_param('/mars_robot/serial_nums/depth_stepper') #Depth tic36v4 stepper driver serial number
         #pitch_SN = rospy.get_param('/mars_robot/serial_nums/pitch_stepper') #Pitch tic36v4 stepper driver serial number
-        odrv0_SN = rospy.get_param('/mars_robot/serial_nums/auger_odrive') #Auger Odrive serial number
+        #odrv0_SN = rospy.get_param('/mars_robot/serial_nums/auger_odrive') #Auger Odrive serial number
         odrv1_SN = rospy.get_param('/mars_robot/serial_nums/loco_odrive') #Locomotion Odrive serial number
 
         #self.digging_locomotion = Digging_Locomotion(depth_SN, pitch_SN, odrv0_SN, odrv1_SN)
-        self.digging_locomotion = Digging_Locomotion(depth_SN, odrv0_SN, odrv1_SN)
+        self.digging_locomotion = Digging_Locomotion(odrv1_SN)
 
         #Get motor speeds:
         self.loco_left_speed = rospy.get_param('/mars_robot/motor_speeds/loco_left_speed')
         self.loco_right_speed = rospy.get_param('/mars_robot/motor_speeds/loco_right_speed')
-        self.auger_speed = rospy.get_param('/mars_robot/motor_speeds/auger_speed')
+        #self.auger_speed = rospy.get_param('/mars_robot/motor_speeds/auger_speed')
         #self.pitch_speed_slow = rospy.get_param('/mars_robot/motor_speeds/pitch_speed_slow')
         #self.pitch_speed_fast = rospy.get_param('/mars_robot/motor_speeds/pitch_speed_fast')
-        self.depth_speed_slow = rospy.get_param('/mars_robot/motor_speeds/depth_speed_slow')
-        self.depth_speed_fast = rospy.get_param('/mars_robot/motor_speeds/depth_speed_fast')
+        #self.depth_speed_slow = rospy.get_param('/mars_robot/motor_speeds/depth_speed_slow')
+        #self.depth_speed_fast = rospy.get_param('/mars_robot/motor_speeds/depth_speed_fast')
 
         self.subscriber = rospy.Subscriber("main_control", String, self.callback_main)
-	#self.subscriber = rospy.Subscriber("sensor_data", Float32MultiArray, self.callback_sensor)
-        self.publisher = rospy.Publisher('motor_data', motor_data_msg, queue_size=10)
+	    #self.subscriber = rospy.Subscriber("sensor_data", Float32MultiArray, self.callback_sensor)
+        #self.publisher = rospy.Publisher('motor_data', motor_data_msg, queue_size=10)
         
 
     def callback_main(self, msg):

@@ -22,18 +22,18 @@ class Digging_Locomotion:
     # Establish the odrive connection for auger
     #---------------------------------------------------------------------
     #def __init__(self, depth_SN, pitch_SN, odrv0_SN, odrv1_SN):
-    def __init__(self, depth_SN, odrv0_SN, odrv1_SN):
-        self.depth_serial_num = depth_SN
+    def __init__(self, odrv1_SN):
+        #self.depth_serial_num = depth_SN
         #self.pitch_serial_num = pitch_SN
-        self.odrv0_serial_num = odrv0_SN
+        #self.odrv0_serial_num = odrv0_SN
         self.odrv1_serial_num = odrv1_SN
 
-        try:
-            print("Searching for digging odrive, this may take a few seconds...")
-            self.odrv0 = odrive.find_any(serial_number=self.odrv0_serial_num)
-            print("Digging odrive connected successfully") 
-        except:
-            print("Unable to find digging odrive")
+        #try:
+        #    print("Searching for digging odrive, this may take a few seconds...")
+        #    self.odrv0 = odrive.find_any(serial_number=self.odrv0_serial_num)
+        #    print("Digging odrive connected successfully") 
+        #except:
+        #    print("Unable to find digging odrive")
 
         try:
             print("Searching for locomotion odrive, this may take a few seconds...")
@@ -42,9 +42,9 @@ class Digging_Locomotion:
         except:
             print("Unable to find locomotion odrive")
 
-        self.auger_motor_engage()
+        #self.auger_motor_engage()
         #self.pitch_motor_engage()
-        self.depth_motor_engage()
+        #self.depth_motor_engage()
         self.loco_engage_motors()
         
     #---------------------------------------------------------------------

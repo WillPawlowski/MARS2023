@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<package format="3">
+    <name>mars_robot</name>
+    <version>0.23.24</version>
+    <description>TODO: Package Description</description>
+    <license>TODO: License Descrption</license>
+    <maintainer email="WPawlowski2001@gmail.com">William Pawlowski</maintainer>
+
+    <buildtool_depend>catkin</buildtool_depend>
+    <build_depend>roslaunch</build_depend>
+
+    <export>
+        <build_type>catkin_cmake</build_type>
+    </export>
+</package>

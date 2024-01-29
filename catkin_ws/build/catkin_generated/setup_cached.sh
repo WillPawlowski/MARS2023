@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/mars/Documents/GitHub/MARS-Lunabotics-2022/catkin_ws/build'
+export PWD='/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build'

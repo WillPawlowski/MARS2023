@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/src
-# Build directory: /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build
+# Source directory: /home/mars/Documents/MARS2023/catkin_ws/src
+# Build directory: /home/mars/Documents/MARS2023/catkin_ws/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
@@ -10,3 +10,4 @@ subdirs("mars_robot_drivers")
 subdirs("mars_robot_launch")
 subdirs("mars_robot_teleop")
 subdirs("mars_robot_msgs")
+subdirs("odrive_ros")

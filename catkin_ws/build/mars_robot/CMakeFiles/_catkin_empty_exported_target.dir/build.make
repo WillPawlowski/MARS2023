@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/mars/Documents/MARS2023/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build
+CMAKE_BINARY_DIR = /home/mars/Documents/MARS2023/catkin_ws/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ mars_robot/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_empty_exp
 .PHONY : mars_robot/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 mars_robot/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build/mars_robot && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/mars/Documents/MARS2023/catkin_ws/build/mars_robot && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : mars_robot/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 mars_robot/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/src /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/src/mars_robot /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build/mars_robot /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build/mars_robot/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mars/Documents/MARS2023/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mars/Documents/MARS2023/catkin_ws/src /home/mars/Documents/MARS2023/catkin_ws/src/mars_robot /home/mars/Documents/MARS2023/catkin_ws/build /home/mars/Documents/MARS2023/catkin_ws/build/mars_robot /home/mars/Documents/MARS2023/catkin_ws/build/mars_robot/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : mars_robot/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

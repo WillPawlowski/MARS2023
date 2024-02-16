@@ -5,7 +5,7 @@
   onboard the robot. This script creates a ROS node and publishes all the
   sensor readings to the arduino_reader_node (Subscriber), which is in a python script, 
   over the /sensor_data topic.
- 
+susudo vim  
   A tutorial explaining how to setup the arduino as a rosserial ROS node can be found at: 
   https://maker.pro/arduino/tutorial/how-to-use-arduino-with-robot-operating-system-ros
 
@@ -40,7 +40,7 @@
 */
 
 
-#include </home/mars/Arduino/libraries/ros_lib/mars_robot_msgs/sensor_msg.h>
+#include "sensor_msg.h"
 //#include <sensor_msg.h>
 #include <ros.h>
 #include <std_msgs/Float32.h>

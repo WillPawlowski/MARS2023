@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "mars_robot_teleop"
-PROJECT_SPACE_DIR = "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/install"
+PROJECT_SPACE_DIR = "/home/mars/Documents/MARS2023/catkin_ws/install"
 PROJECT_VERSION = "0.0.0"

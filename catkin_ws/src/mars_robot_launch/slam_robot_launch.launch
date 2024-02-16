@@ -1,0 +1,9 @@
+<launch>
+
+    <param name="robot_description" command="$(find xacro)/xacro '$(find mars_robot)/description/robot.urdf.xacro'"/>
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type='robot_state_publisher' output="screen">
+
+    </node>
+
+</launch>

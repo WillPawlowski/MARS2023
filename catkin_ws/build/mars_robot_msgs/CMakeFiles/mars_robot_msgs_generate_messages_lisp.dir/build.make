@@ -43,33 +43,33 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/mars/Documents/MARS2023/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build
+CMAKE_BINARY_DIR = /home/mars/Documents/MARS2023/catkin_ws/build
 
 # Utility rule file for mars_robot_msgs_generate_messages_lisp.
 
 # Include the progress variables for this target.
 include mars_robot_msgs/CMakeFiles/mars_robot_msgs_generate_messages_lisp.dir/progress.make
 
-mars_robot_msgs/CMakeFiles/mars_robot_msgs_generate_messages_lisp: /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg/sensor_msg.lisp
-mars_robot_msgs/CMakeFiles/mars_robot_msgs_generate_messages_lisp: /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg/motor_data_msg.lisp
+mars_robot_msgs/CMakeFiles/mars_robot_msgs_generate_messages_lisp: /home/mars/Documents/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg/motor_data_msg.lisp
+mars_robot_msgs/CMakeFiles/mars_robot_msgs_generate_messages_lisp: /home/mars/Documents/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg/sensor_msg.lisp
 
 
-/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg/sensor_msg.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
-/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg/sensor_msg.lisp: /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/src/mars_robot_msgs/msg/sensor_msg.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from mars_robot_msgs/sensor_msg.msg"
-	cd /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build/mars_robot_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/src/mars_robot_msgs/msg/sensor_msg.msg -Imars_robot_msgs:/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/src/mars_robot_msgs/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p mars_robot_msgs -o /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg
+/home/mars/Documents/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg/motor_data_msg.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
+/home/mars/Documents/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg/motor_data_msg.lisp: /home/mars/Documents/MARS2023/catkin_ws/src/mars_robot_msgs/msg/motor_data_msg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mars/Documents/MARS2023/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from mars_robot_msgs/motor_data_msg.msg"
+	cd /home/mars/Documents/MARS2023/catkin_ws/build/mars_robot_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/mars/Documents/MARS2023/catkin_ws/src/mars_robot_msgs/msg/motor_data_msg.msg -Imars_robot_msgs:/home/mars/Documents/MARS2023/catkin_ws/src/mars_robot_msgs/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p mars_robot_msgs -o /home/mars/Documents/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg
 
-/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg/motor_data_msg.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
-/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg/motor_data_msg.lisp: /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/src/mars_robot_msgs/msg/motor_data_msg.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from mars_robot_msgs/motor_data_msg.msg"
-	cd /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build/mars_robot_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/src/mars_robot_msgs/msg/motor_data_msg.msg -Imars_robot_msgs:/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/src/mars_robot_msgs/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p mars_robot_msgs -o /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg
+/home/mars/Documents/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg/sensor_msg.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
+/home/mars/Documents/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg/sensor_msg.lisp: /home/mars/Documents/MARS2023/catkin_ws/src/mars_robot_msgs/msg/sensor_msg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mars/Documents/MARS2023/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from mars_robot_msgs/sensor_msg.msg"
+	cd /home/mars/Documents/MARS2023/catkin_ws/build/mars_robot_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/mars/Documents/MARS2023/catkin_ws/src/mars_robot_msgs/msg/sensor_msg.msg -Imars_robot_msgs:/home/mars/Documents/MARS2023/catkin_ws/src/mars_robot_msgs/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p mars_robot_msgs -o /home/mars/Documents/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg
 
 mars_robot_msgs_generate_messages_lisp: mars_robot_msgs/CMakeFiles/mars_robot_msgs_generate_messages_lisp
-mars_robot_msgs_generate_messages_lisp: /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg/sensor_msg.lisp
-mars_robot_msgs_generate_messages_lisp: /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg/motor_data_msg.lisp
+mars_robot_msgs_generate_messages_lisp: /home/mars/Documents/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg/motor_data_msg.lisp
+mars_robot_msgs_generate_messages_lisp: /home/mars/Documents/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs/msg/sensor_msg.lisp
 mars_robot_msgs_generate_messages_lisp: mars_robot_msgs/CMakeFiles/mars_robot_msgs_generate_messages_lisp.dir/build.make
 
 .PHONY : mars_robot_msgs_generate_messages_lisp
@@ -80,10 +80,10 @@ mars_robot_msgs/CMakeFiles/mars_robot_msgs_generate_messages_lisp.dir/build: mar
 .PHONY : mars_robot_msgs/CMakeFiles/mars_robot_msgs_generate_messages_lisp.dir/build
 
 mars_robot_msgs/CMakeFiles/mars_robot_msgs_generate_messages_lisp.dir/clean:
-	cd /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build/mars_robot_msgs && $(CMAKE_COMMAND) -P CMakeFiles/mars_robot_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/mars/Documents/MARS2023/catkin_ws/build/mars_robot_msgs && $(CMAKE_COMMAND) -P CMakeFiles/mars_robot_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : mars_robot_msgs/CMakeFiles/mars_robot_msgs_generate_messages_lisp.dir/clean
 
 mars_robot_msgs/CMakeFiles/mars_robot_msgs_generate_messages_lisp.dir/depend:
-	cd /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/src /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/src/mars_robot_msgs /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build/mars_robot_msgs /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build/mars_robot_msgs/CMakeFiles/mars_robot_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mars/Documents/MARS2023/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mars/Documents/MARS2023/catkin_ws/src /home/mars/Documents/MARS2023/catkin_ws/src/mars_robot_msgs /home/mars/Documents/MARS2023/catkin_ws/build /home/mars/Documents/MARS2023/catkin_ws/build/mars_robot_msgs /home/mars/Documents/MARS2023/catkin_ws/build/mars_robot_msgs/CMakeFiles/mars_robot_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : mars_robot_msgs/CMakeFiles/mars_robot_msgs_generate_messages_lisp.dir/depend
 

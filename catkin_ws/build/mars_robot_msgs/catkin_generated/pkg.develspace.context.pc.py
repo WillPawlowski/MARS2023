@@ -1,8 +1,8 @@
 # generated from catkin/cmake/template/pkg.context.pc.in
 CATKIN_PACKAGE_PREFIX = ""
-PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/include".split(';') if "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/include" != "" else []
+PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/mars/Documents/MARS2023/catkin_ws/devel/include".split(';') if "/home/mars/Documents/MARS2023/catkin_ws/devel/include" != "" else []
 PROJECT_CATKIN_DEPENDS = "std_msgs;message_runtime".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "mars_robot_msgs"
-PROJECT_SPACE_DIR = "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel"
+PROJECT_SPACE_DIR = "/home/mars/Documents/MARS2023/catkin_ws/devel"
 PROJECT_VERSION = "0.0.0"

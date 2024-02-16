@@ -1,8 +1,8 @@
-# Install script for directory: /home/mars/Documents/GitHub2023/MARS2023/catkin_ws/src/mars_robot_msgs
+# Install script for directory: /home/mars/Documents/MARS2023/catkin_ws/src/mars_robot_msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/mars/Documents/MARS2023/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,55 +39,55 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mars_robot_msgs/msg" TYPE FILE FILES
-    "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/src/mars_robot_msgs/msg/sensor_msg.msg"
-    "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/src/mars_robot_msgs/msg/motor_data_msg.msg"
+    "/home/mars/Documents/MARS2023/catkin_ws/src/mars_robot_msgs/msg/sensor_msg.msg"
+    "/home/mars/Documents/MARS2023/catkin_ws/src/mars_robot_msgs/msg/motor_data_msg.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mars_robot_msgs/cmake" TYPE FILE FILES "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build/mars_robot_msgs/catkin_generated/installspace/mars_robot_msgs-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mars_robot_msgs/cmake" TYPE FILE FILES "/home/mars/Documents/MARS2023/catkin_ws/build/mars_robot_msgs/catkin_generated/installspace/mars_robot_msgs-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/include/mars_robot_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/mars/Documents/MARS2023/catkin_ws/devel/include/mars_robot_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/share/roseus/ros/mars_robot_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/mars/Documents/MARS2023/catkin_ws/devel/share/roseus/ros/mars_robot_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/mars/Documents/MARS2023/catkin_ws/devel/share/common-lisp/ros/mars_robot_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/share/gennodejs/ros/mars_robot_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/mars/Documents/MARS2023/catkin_ws/devel/share/gennodejs/ros/mars_robot_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/lib/python2.7/dist-packages/mars_robot_msgs")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/mars/Documents/MARS2023/catkin_ws/devel/lib/python2.7/dist-packages/mars_robot_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/devel/lib/python2.7/dist-packages/mars_robot_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/mars/Documents/MARS2023/catkin_ws/devel/lib/python2.7/dist-packages/mars_robot_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build/mars_robot_msgs/catkin_generated/installspace/mars_robot_msgs.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/mars/Documents/MARS2023/catkin_ws/build/mars_robot_msgs/catkin_generated/installspace/mars_robot_msgs.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mars_robot_msgs/cmake" TYPE FILE FILES "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build/mars_robot_msgs/catkin_generated/installspace/mars_robot_msgs-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mars_robot_msgs/cmake" TYPE FILE FILES "/home/mars/Documents/MARS2023/catkin_ws/build/mars_robot_msgs/catkin_generated/installspace/mars_robot_msgs-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mars_robot_msgs/cmake" TYPE FILE FILES
-    "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build/mars_robot_msgs/catkin_generated/installspace/mars_robot_msgsConfig.cmake"
-    "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/build/mars_robot_msgs/catkin_generated/installspace/mars_robot_msgsConfig-version.cmake"
+    "/home/mars/Documents/MARS2023/catkin_ws/build/mars_robot_msgs/catkin_generated/installspace/mars_robot_msgsConfig.cmake"
+    "/home/mars/Documents/MARS2023/catkin_ws/build/mars_robot_msgs/catkin_generated/installspace/mars_robot_msgsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mars_robot_msgs" TYPE FILE FILES "/home/mars/Documents/GitHub2023/MARS2023/catkin_ws/src/mars_robot_msgs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mars_robot_msgs" TYPE FILE FILES "/home/mars/Documents/MARS2023/catkin_ws/src/mars_robot_msgs/package.xml")
 endif()
 

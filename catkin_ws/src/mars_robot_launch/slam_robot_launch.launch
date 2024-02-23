@@ -1,9 +1,11 @@
 <launch>
 
+    <include file="$(find odrive_ros)/launch/odrive.launch"/>
+    <include file="$(find rplidar_ros)/launch/rplidar_a3.launch"/>
+    <!--include file="$(find ox)/online_async.launch"/-->
+
     <param name="robot_description" command="$(find xacro)/xacro '$(find mars_robot)/description/robot.urdf.xacro'"/>
 
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type='robot_state_publisher' output="screen">
-
-    </node>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type='robot_state_publisher' output="screen"/>
 
 </launch>

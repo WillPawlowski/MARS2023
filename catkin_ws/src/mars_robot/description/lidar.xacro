@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-    <joint name="laser_joint" type="fixed">
+    <joint name="laser" type="fixed">
         <parent link="chassis"/>
-        <child link="laser_frame"/>
-        <origin xyz=".90 0 0.25" rpy="0 0 0"/>
+        <child link="laser"/>
+        <origin xyz=".35 0 0.05" rpy="0 0 0"/>
     </joint>
 
-    <link name="laser_frame">
+    <link name="laser">
         <visual>
             <geometry>
                 <cylinder radius="0.05" length="0.04"/>
@@ -26,7 +26,7 @@
 
 
 
-    <gazebo reference="laser_frame">
+    <gazebo reference="laser">
         <material>Gazebo/Red</material>
 
         <sensor name="laser" type="gpu_ray">

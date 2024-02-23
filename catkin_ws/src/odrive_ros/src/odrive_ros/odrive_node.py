@@ -101,7 +101,7 @@ class ODriveNode(object):
         
         self.publish_odom    = get_param('~publish_odom', True)
         self.publish_tf      = get_param('~publish_odom_tf', True)
-        self.odom_topic      = get_param('~odom_topic', "odom")
+        self.odom_topic      = get_param('~odom_topic', "/odom")
         self.odom_frame      = get_param('~odom_frame', "odom")
         self.base_frame      = get_param('~base_frame', "base_link")
         self.odom_calc_hz    = get_param('~odom_calc_hz', 10)
@@ -438,8 +438,8 @@ class ODriveNode(object):
         self.m_s_to_value = self.driver.encoder_cpr/self.tyre_circumference
         
         if self.publish_odom:
-            self.old_pos_l = self.driver.left_axis.encoder.pos_cpr_counts
-            self.old_pos_r = self.driver.right_axis.encoder.pos_cpr_counts
+            self.old_pos_l = self.driver.left_axis.encoder.pos_estimate
+            self.old_pos_r = self.driver.right_axis.encoder.pos_estimate
         
         self.fast_timer_comms_active = True
         

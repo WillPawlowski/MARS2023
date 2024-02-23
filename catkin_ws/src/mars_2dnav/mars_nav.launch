@@ -1,0 +1,8 @@
+<launch>
+
+   <master auto="start"/>
+   <include file="$(find mars_robot_launch)/slam_robot_launch.launch"/>
+   <include file="$(find mars_2dnav)/move_base.launch"/>
+ 
+
+</launch> 

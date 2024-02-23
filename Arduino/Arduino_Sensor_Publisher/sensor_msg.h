@@ -12,7 +12,7 @@
 //#include <memory>
 
 #include </opt/ros/melodic/include/ros/types.h>
-#include </opt/ros/melodic/include/ros/serialization.h>
+//#include </opt/ros/melodic/include/ros/serialization.h>
 #include <ros/builtin_message_traits.h>
 #include <ros/message_operations.h>
 

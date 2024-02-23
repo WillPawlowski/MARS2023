@@ -1,3 +1,10 @@
+#include <ArduinoHardware.h>
+#include <ros.h>
+#include <ArduinoTcpHardware.h>
+
+#include <ros.h>
+#include <ArduinoTcpHardware.h>
+
 /* Authors:   Abraham Yakisan & Chris Piszczek
  * Created:   2.19.2021
   
@@ -40,8 +47,9 @@ susudo vim
 */
 
 
-#include "sensor_msg.h"
-//#include <sensor_msg.h>
+//#include "sensor_msg.h
+//#include <ros_lib/sensor_msg.h>
+#include </home/mars/Arduino/libraries/ros_lib/mars_robot_msgs/sensor_msg.h>
 #include <ros.h>
 #include <std_msgs/Float32.h>
 #include <HX711_ADC.h>
@@ -49,7 +57,7 @@ susudo vim
 #include <EEPROM.h>
 #include <I2Cdev.h>
 #include "MPU6050_6Axis_MotionApps20.h"
-//#include "MPU6050.h" not necessary if using MotionApps include file
+#include "MPU6050.h" not necessary if using MotionApps include file
 
 // Arduino Wire library is required if I2Cdev I2CDEV_ARDUINO_WIRE implementation
 // is used in I2Cdev.h

@@ -1,0 +1,8 @@
+prefix=/home/mars/Documents/MARS2023/catkin_ws/devel
+
+Name: mars_2dnav
+Description: Description of mars_2dnav
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

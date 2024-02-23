@@ -1,0 +1,13 @@
+<launch>
+
+   <node pkg="lidar_ros" type="rplidarNode" name="lidar" output="screen">
+    <param name="lidar_param" command="$(find xacro)/xacro '$(find mars_robot)/description/lidar.xacro'" />
+ </node>
+ <node pkg="odrive_ros" type="odrive_node.py" name="odom_node" output="screen">
+    <param name="odom_param" command="$(find xacro)/xacro '$(find mars_robot)/description/rover_core.xacro'" />
+ </node>
+ <node pkg="transform_configuration_pkg" type="transform_configuration_type" name="transform_configuration_name" output="screen">
+    <param name="transform_configuration_param" value="param_value" />
+ </node>
+
+</launch> 

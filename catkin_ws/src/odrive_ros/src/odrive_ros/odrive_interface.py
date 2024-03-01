@@ -61,7 +61,7 @@ class ODriveInterfaceAPI(object):
         if self.driver:
             self.logger.info("Already connected. Disconnecting and reconnecting.")
         try:
-            self.driver = odrive.find_any(serial_number="20863880304E",timeout=timeout, logger=self.logger)
+            self.driver = odrive.find_any(serial_number="206430804648",timeout=timeout, logger=self.logger)
             self.axes = (self.driver.axis0, self.driver.axis1)
         except:
             self.logger.error("No ODrive found. Is device powered?")

@@ -7,7 +7,7 @@ mars_robot:
     depth_stepper: "00320097"
     pitch_stepper: "00320100"
     auger_odrive: "207B37943548"
-    loco_odrive: "20863880304E"
+    loco_odrive: "206430804648"
   
   #Ports:
   ports:

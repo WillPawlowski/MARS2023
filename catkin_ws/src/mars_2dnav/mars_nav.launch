@@ -1,8 +1,13 @@
 <launch>
 
    <master auto="start"/>
-   <include file="$(find mars_robot_launch)/slam_robot_launch.launch"/>
+   <!--include file="$(find mars_robot_launch)/slam_robot_launch.launch"/-->
    <include file="$(find mars_2dnav)/move_base.launch"/>
+
+   <param name="robot_description" command="$(find xacro)/xacro '$(find mars_robot)/description/robot.urdf.xacro'"/>
+
+   <node name="robot_state_publisher" pkg="robot_state_publisher" type='robot_state_publisher' output="screen"/>
  
+   <include file="$(find amcl)/examples/amcl_diff.launch" />
 
 </launch> 

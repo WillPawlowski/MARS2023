@@ -1,10 +1,9 @@
 #include <ArduinoHardware.h>
 #include <ros.h>
-#include <ArduinoTcpHardware.h>
 
-#include <ros.h>
-#include <ArduinoTcpHardware.h>
 
+
+#include <std_msgs/String.h>
 /* Authors:   Abraham Yakisan & Chris Piszczek
  * Created:   2.19.2021
   
@@ -50,7 +49,7 @@ susudo vim
 //#include "sensor_msg.h
 //#include <ros_lib/sensor_msg.h>
 #include </home/mars/Arduino/libraries/ros_lib/mars_robot_msgs/sensor_msg.h>
-#include <ros.h>
+//#include <ros.h>
 #include <std_msgs/Float32.h>
 #include <HX711_ADC.h>
 //#if defined(ESP8266)|| defined(ESP32) || defined(AVR)
@@ -144,11 +143,13 @@ const int laser_right_pin = 26;
 
 void setup() {
   //Initilization of ROS node
+    
+  Serial.begin(57600);//baud 57600 gab
   node_handle.initNode();
   node_handle.advertise(sensor_data_publisher);
   
-  Serial.begin(57600);//baud 57600
-  delay(10);
+  //Serial.begin(57600);//baud 57600 
+  //delay(10);
 
   //=================================
   //  Gyro Setup
@@ -261,7 +262,7 @@ void loop() {
       Serial.println(ypr[2] * 180/M_PI);
     #endif
     
-    collected_data.yaw = ypr[0]; //set field in ros message
+   // collected_data.yaw = ypr[0]; //set field in ros message
     
     // blink LED to indicate activity
     blinkState = !blinkState;
@@ -283,7 +284,7 @@ void loop() {
       float mass = LoadCell.getData(); //in grams
       Serial.print("Mass: ");
       Serial.println(mass);
-      collected_data.mass = mass;      //set field in ros message
+//      collected_data.mass = mass;      //set field in ros message
       newDataReady = 0;
       t = millis();
     }
@@ -297,9 +298,9 @@ void loop() {
   bool right_hit = digitalRead(laser_right_pin);  //bool value
 
   //set fields in ros message
-  collected_data.laser_top_hit = top_hit;
-  collected_data.laser_left_hit = left_hit;
-  collected_data.laser_right_hit = right_hit;
+//  collected_data.laser_top_hit = top_hit;
+  //collected_data.laser_left_hit = left_hit;
+  //collected_data.laser_right_hit = right_hit;
 
   
   if(top_hit){
@@ -319,7 +320,7 @@ void loop() {
   if(depth_bottom_hit){
     Serial.println("MAX DEPTH REACHED"); 
   } 
-  collected_data.depth_bottom_switch = depth_bottom_hit;
+ // collected_data.depth_bottom_switch = depth_bottom_hit;
   
   //=================================
   //  ROS Publish

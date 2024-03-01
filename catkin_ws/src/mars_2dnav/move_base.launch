@@ -5,7 +5,7 @@
    <include file="$(find rplidar_ros)/launch/rplidar_a3.launch"/>
 
  <!--- Run AMCL --> 
-    <!--include file="$(find amcl)/examples/amcl_diff.launch" /-->
+    
 
    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <rosparam file="$(find mars_2dnav)/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
@@ -13,6 +13,12 @@
     <rosparam file="$(find mars_2dnav)/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find mars_2dnav)/global_costmap_params.yaml" command="load" /> 
     <rosparam file="$(find mars_2dnav)/base_local_planner_params.yaml" command="load" />
- </node>
+   </node>
+
+   <node pkg="rviz" type="rviz" name="rviz">
+   </node> 
+
+   <node pkg="localization_data_pub" type="rviz_click_to_2d" name="rviz_click_to_2d">
+   </node>
 
 </launch> 

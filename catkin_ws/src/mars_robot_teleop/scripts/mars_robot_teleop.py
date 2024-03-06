@@ -27,29 +27,16 @@ instructions = '---------------------------------------------------------\n' \
         '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/loco_backward_key')) + \
         '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/loco_right_key')) + '\n' +\
         '\tspace: stop loco motors\n' \
-    'Auger motor:\n'    \
-        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/auger_dig_key')) + ':      auger on\n' +\
-        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/auger_stop_key')) + ':      auger stop\n' +\
-        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/auger_reverse_key')) + ':      auger reverse\n' +\
     'Pitch motor:\n'    \
         '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/pitch_increase_fast_key')) + ':      pitch increase fast\n' +\
         '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/pitch_increase_slow_key')) + ':      pitch increase slow\n' +\
         '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/pitch_stop_key')) + ':      pitch stop\n' +\
         '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/pitch_decrease_slow_key')) + ':      pitch decrease slow\n' +\
         '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/pitch_decrease_fast_key')) + ':      pitch decrease fast\n' +\
-    'Depth motor:\n'    \
-        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/depth_increase_fast_key')) + ':      depth up fast\n' +\
-        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/depth_increase_slow_key')) + ':      depth up slow\n' +\
-        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/depth_stop_key')) + ':      depth stop\n' +\
-        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/depth_decrease_slow_key')) + ':      depth down slow\n' +\
-        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/depth_decrease_fast_key')) + ':      depth down fast\n' +\
     'Dumping actuator:\n'    \
         '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/dumpa_extend_key')) + ':      extend actuator\n' +\
         '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/dumpa_stop_key')) + ':      stop actuator\n' +\
         '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/dumpa_retract_key')) + ':      retract actuator\n' +\
-    'Vibrator motor:\n'    \
-        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/vibrator_on_key')) + ':      vibrator on\n' +\
-        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/vibrator_off_key')) + ':      vibrator off\n' +\
     'To quit: <CTRL-C>, wait 5 sec., <CTRL-C>'
 
 

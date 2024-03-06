@@ -18,10 +18,9 @@ class Digging_Locomotion_WrapperROS:
     def __init__(self):
         #Get driver serial numbers:
         #pitch_SN = rospy.get_param('/mars_robot/serial_nums/pitch_stepper') #Pitch tic36v4 stepper driver serial number
-        odrv1_SN = rospy.get_param('/mars_robot/serial_nums/loco_odrive') #Locomotion Odrive serial number
+        odrv0_SN = rospy.get_param('/mars_robot/serial_nums/loco_odrive') #Locomotion Odrive serial number
 
-        #self.digging_locomotion = Digging_Locomotion(depth_SN, pitch_SN, odrv0_SN, odrv1_SN)
-        self.digging_locomotion = Digging_Locomotion(odrv1_SN)
+        self.digging_locomotion = Digging_Locomotion(odrv0_SN)
 
         #Get motor speeds:
         self.loco_left_speed = rospy.get_param('/mars_robot/motor_speeds/loco_left_speed')
@@ -70,23 +69,6 @@ class Digging_Locomotion_WrapperROS:
             self.digging_locomotion.pitch_motor_turn(-1*self.pitch_speed_fast)
             rospy.sleep(12)
             self.digging_locomotion.pitch_motor_stop()      
-	
-	#digging autonomy
-        if opcode == '3':
-            self.digging_locomotion.depth_motor_turn(-1*self.depth_speed_fast)
-            self.digging_locomotion.auger_motor_turn(self.auger_speed)
-            rospy.sleep(30)
-            self.digging_locomotion.depth_motor_turn(-1*self.depth_speed_slow)
-            rospy.sleep(45)
-            self.digging_locomotion.depth_motor_stop()
-        if opcode =='4':
-            self.digging_locomotion.depth_motor_turn(self.depth_speed_slow)
-            rospy.sleep(135)
-            self.digging_locomotion.depth_motor_stop()
-            self.digging_locomotion.auger_motor_turn(-1*self.auger_speed)
-            rospy.sleep(3)
-            self.digging_locomotion.auger_motor_stop()
-            self.digging_locomotion.auger_motor_stop()
 
         #Print Data of Motors
         if opcode == rospy.get_param('/mars_robot/diagnostic_values/print_motor_data'):

@@ -19,9 +19,7 @@ from digging_locomotion_driver import Digging_Locomotion
 class Digging_Autonomy:
     def __init__(self):
         #Get driver serial numbers:
-        depth_SN = rospy.get_param('/mars_robot/serial_nums/depth_stepper') #Depth tic36v4 stepper driver serial number
         pitch_SN = rospy.get_param('/mars_robot/serial_nums/pitch_stepper') #Pitch tic36v4 stepper driver serial number
-        odrv0_SN = rospy.get_param('/mars_robot/serial_nums/auger_odrive') #Auger Odrive serial number
         odrv1_SN = rospy.get_param('/mars_robot/serial_nums/loco_odrive') #Locomotion Odrive serial number
 
         #self.digging_locomotion = Digging_Locomotion(depth_SN, pitch_SN, odrv0_SN, odrv1_SN)
@@ -29,9 +27,7 @@ class Digging_Autonomy:
         #Get motor speeds:
         self.loco_left_speed = rospy.get_param('/mars_robot/motor_speeds/loco_left_speed')
         self.loco_right_speed = rospy.get_param('/mars_robot/motor_speeds/loco_right_speed')
-        self.auger_speed = rospy.get_param('/mars_robot/motor_speeds/auger_speed')
         self.pitch_speed = rospy.get_param('/mars_robot/motor_speeds/pitch_speed')
-        self.depth_speed = rospy.get_param('/mars_robot/motor_speeds/depth_speed')
 
         #Subscriber that recieves all keyboard cmds
         rospy.Subscriber("main_control", String, self.callback_main)
@@ -49,8 +45,6 @@ class Digging_Autonomy:
         if opcode == rospy.get_param('/mars_robot/manual_control_keys/digging_auto_start'):
 
             rospy.loginfo("Starting Digging Autonomy...")
-            rospy.loginfo("Increase Auger Pitch...")
-            rospy.loginfo("Turn Auger On...")
 
             while(True): #<---- Should be until depth bottom limit switch is not hit or max mass collected not reached
                 rospy.loginfo("Depth Decrease...")
@@ -68,9 +62,6 @@ class Digging_Autonomy:
             
             #Homing Sequence
             if self.auto_stop == False: 
-                rospy.loginfo("Fully pull out auger...")
-                rospy.loginfo("Turn Auger Off...")
-                rospy.loginfo("Decrease Auger Pitch...")
                 rospy.loginfo("Finished Digging Autonomy...")
 
             rospy.loginfo("Finishing Digging Autonomy...")

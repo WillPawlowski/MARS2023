@@ -748,6 +748,12 @@ laser_geometry_DIR:PATH=/opt/ros/melodic/share/laser_geometry/cmake
 lib:FILEPATH=/opt/ros/melodic/lib/libxmlrpcpp.so
 
 //Value Computed by CMake
+localization_data_pub_BINARY_DIR:STATIC=/home/mars/Documents/MARS2023/catkin_ws/build/localization_data_pub
+
+//Value Computed by CMake
+localization_data_pub_SOURCE_DIR:STATIC=/home/mars/Documents/MARS2023/catkin_ws/src/localization_data_pub
+
+//Value Computed by CMake
 mars_2dnav_BINARY_DIR:STATIC=/home/mars/Documents/MARS2023/catkin_ws/build/mars_2dnav
 
 //Value Computed by CMake
@@ -1061,7 +1067,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

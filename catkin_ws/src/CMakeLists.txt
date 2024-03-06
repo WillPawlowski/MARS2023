@@ -7,6 +7,10 @@ project(mars_robot)
 #find_package(catkin REQUIRED COMPONENTS roslaunch)
 #roslaunch_add_file_check(mars_robot_launch)
 
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
+
 set(CATKIN_TOPLEVEL TRUE)
 
 # search for catkin within the workspace

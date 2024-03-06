@@ -137,6 +137,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/mars/Documents/MARS2023/catkin_ws/build/mars_robot_teleop/cmake_install.cmake")
   include("/home/mars/Documents/MARS2023/catkin_ws/build/mars_robot_msgs/cmake_install.cmake")
   include("/home/mars/Documents/MARS2023/catkin_ws/build/odrive_ros/cmake_install.cmake")
+  include("/home/mars/Documents/MARS2023/catkin_ws/build/localization_data_pub/cmake_install.cmake")
+  include("/home/mars/Documents/MARS2023/catkin_ws/build/ira_laser_tools/cmake_install.cmake")
   include("/home/mars/Documents/MARS2023/catkin_ws/build/mars_2dnav/cmake_install.cmake")
 
 endif()

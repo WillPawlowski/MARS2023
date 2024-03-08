@@ -1,2 +1,2 @@
-ira_laser_tools:localization_data_pub:mars_2dnav:mars_robot:mars_robot_drivers:mars_robot_launch:mars_robot_msgs:mars_robot_teleop:odrive_ros
+ira_laser_tools:mars_2dnav:mars_robot:mars_robot_drivers:mars_robot_launch:mars_robot_msgs:mars_robot_teleop:odrive_ros
 -DCATKIN_DEVEL_PREFIX=/home/mars/Documents/MARS2023/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mars/Documents/MARS2023/catkin_ws/install -G Unix Makefiles

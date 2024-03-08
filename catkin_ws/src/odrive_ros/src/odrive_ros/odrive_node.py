@@ -68,7 +68,7 @@ class ODriveNode(object):
     tyre_circumference = None
     encoder_counts_per_rev = None
     m_s_to_value = 1.0
-    axis_for_right = 0
+    axis_for_right = 1
     encoder_cpr = 4096
     
     # Startup parameters
@@ -86,7 +86,7 @@ class ODriveNode(object):
         self.publish_joint_angles = get_param('publish_joint_angles', True) # if self.sim_mode else False
         self.publish_temperatures = get_param('publish_temperatures', True)
         
-        self.axis_for_right = float(get_param('~axis_for_right', 0)) # if right calibrates first, this should be 0, else 1
+        self.axis_for_right = float(get_param('~axis_for_right', 1)) # if right calibrates first, this should be 0, else 1
         self.wheel_track = float(get_param('~wheel_track', 0.285)) # m, distance between wheel centres
         self.tyre_circumference = float(get_param('~tyre_circumference', 0.341)) # used to translate velocity commands in m/s into motor rpm
         

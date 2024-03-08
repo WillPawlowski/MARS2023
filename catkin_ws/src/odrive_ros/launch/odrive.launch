@@ -16,6 +16,7 @@
             output="$(arg output)" respawn="$(arg respawn)">
         <param name="wheel_track" value="1.08"/>
         <param name="tyre_circumference" value="0.079"/>
+        <param name="axis_for_right" value="1"/>
         
         <param name="connect_on_startup"   value="$(arg connect_on_startup)"/>
         <param name="calibrate_on_startup" value="$(arg calibrate_on_startup)"/>

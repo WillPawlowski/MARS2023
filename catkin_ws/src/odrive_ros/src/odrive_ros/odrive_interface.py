@@ -42,8 +42,8 @@ class ODriveInterfaceAPI(object):
         if active_odrive: # pass in the odrv0 object from odrivetool shell to use it directly.
             self.driver = active_odrive
             self.axes = (self.driver.axis0, self.driver.axis1)
-            self.right_axis = self.driver.axis0 
-            self.left_axis  = self.driver.axis1
+            self.right_axis = self.driver.axis1 
+            self.left_axis  = self.driver.axis0
             self.logger.info("Loaded pre-existing ODrive interface. Check index search status.")
             self.encoder_cpr = self.driver.axis0.encoder.config.cpr
             self.connected = True
@@ -57,7 +57,7 @@ class ODriveInterfaceAPI(object):
         # provided so simulator can update position
         pass
                     
-    def connect(self, port=None, right_axis=0, timeout=30):
+    def connect(self, port=None, right_axis=1, timeout=30):
         if self.driver:
             self.logger.info("Already connected. Disconnecting and reconnecting.")
         try:
@@ -68,8 +68,8 @@ class ODriveInterfaceAPI(object):
             return False
                         
         # save some parameters for easy access
-        self.right_axis = self.driver.axis0 if right_axis == 0 else self.driver.axis1
-        self.left_axis  = self.driver.axis1 if right_axis == 0 else self.driver.axis0
+        self.right_axis = self.driver.axis1 #if right_axis == 0 else self.driver.axis0
+        self.left_axis  = self.driver.axis0 #if right_axis == 0 else self.driver.axis1
         
         # check for no errors
         for axis in [self.right_axis, self.left_axis]:

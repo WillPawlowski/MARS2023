@@ -20,6 +20,7 @@ class Digging_Locomotion_WrapperROS:
         #pitch_SN = rospy.get_param('/mars_robot/serial_nums/pitch_stepper') #Pitch tic36v4 stepper driver serial number
         odrv0_SN = rospy.get_param('/mars_robot/serial_nums/loco_odrive') #Locomotion Odrive serial number
 
+        #self.digging_locomotion = Digging_Locomotion(odrv0_SN, pitch_SN)
         self.digging_locomotion = Digging_Locomotion(odrv0_SN)
 
         #Get motor speeds:

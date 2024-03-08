@@ -1,7 +1,3 @@
-"""
-Comment here
-
-"""
 import subprocess
 #import time
 #import math
@@ -10,15 +6,12 @@ from pynput import keyboard
 #import subprocess
 from yaml import load, dump
 
-try:
-    from yaml import CLoader as Loader, CDumper as Dumper
-except ImportError:
-    from yaml import Loader, Dumper
+#try:
+#    from yaml import CLoader as Loader, CDumper as Dumper
+#except ImportError:
+#    from yaml import Loader, Dumper
 
 
-"""
-This function reads the keyboard input from the user and moves the robot in the according
-"""
 def key_press(key):
     # stop looking for key inputs
     if key == keyboard.Key.esc:

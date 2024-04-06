@@ -15,6 +15,7 @@ from geometry_msgs.msg import Twist
 from std_msgs.msg import String
 
 import sys, select, termios, tty
+import time
 
 instructions = '---------------------------------------------------------\n' \
     'Reading from the keyboard and Publishing to /main_control!\n' \
@@ -33,10 +34,14 @@ instructions = '---------------------------------------------------------\n' \
         '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/pitch_stop_key')) + ':      pitch stop\n' +\
         '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/pitch_decrease_slow_key')) + ':      pitch decrease slow\n' +\
         '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/pitch_decrease_fast_key')) + ':      pitch decrease fast\n' +\
-    'Dumping actuator:\n'    \
-        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/dumpa_extend_key')) + ':      extend actuator\n' +\
-        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/dumpa_stop_key')) + ':      stop actuator\n' +\
-        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/dumpa_retract_key')) + ':      retract actuator\n' +\
+    'Tool actuator NOT IMPLEMENTED:\n'    \
+        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/tool_extend_key')) + ':      extend actuator\n' +\
+        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/tool_stop_key')) + ':      stop actuator\n' +\
+        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/tool_retract_key')) + ':      retract actuator\n' +\
+    'Bucket actuator:\n'    \
+        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/bucket_extend_key')) + ':      extend bucket\n' +\
+        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/bucket_stop_key')) + ':      stop bucket\n' +\
+        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/bucket_retract_key')) + ':      retract bucket\n' +\
     'To quit: <CTRL-C>, wait 5 sec., <CTRL-C>'
 
 
@@ -48,6 +53,7 @@ class PublishThread(threading.Thread):
         self.condition = threading.Condition()
         self.done = False
 
+        time.sleep(5)
         # Set timeout to None if rate is 0 (causes new_message to wait forever
         # for new data to publish)
         if rate != 0.0:

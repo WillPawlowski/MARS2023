@@ -1,0 +1,8 @@
+prefix=/home/mars/Documents/MARS2023/catkin_ws/install
+
+Name: mars_robot_drivers
+Description: Description of mars_robot_drivers
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -4,7 +4,7 @@
     
     <!--Spawn all Nodes: Output teleop to terminal-->
     <node name='digging_locomotion_node' pkg= 'mars_robot_drivers' type='digging_locomotion_wrapper.py'/>
-    <!--node name='dumping_node' pkg='mars_robot_drivers' type='dumping_wrapper.py'/-->
+    <node name='dumping_node' pkg='mars_robot_drivers' type='dumping_wrapper.py'/>
     <!--node name='motor_current_checker' pkg='mars_robot_teleop' type='mars_current_checker.py'/-->
     <!--node name='arduino_node' pkg='rosserial_python' type='serial_node.py' args= '/dev/ttyACM4'/-->
     <!--node name='sensor_reader_node' pkg='mars_robot_drivers' type='arduino_sensor_reader.py'/-->

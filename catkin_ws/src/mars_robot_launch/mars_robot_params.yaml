@@ -11,7 +11,7 @@ mars_robot:
   
   #Ports:
   ports:
-    roboclaw_port: '/dev/ttyACM2'
+    roboclaw_port: '/dev/ttyACM1'
     #arduino_port: must be defined in mars_robot_launch.launch file
 
   #Manual Control Keybindings:
@@ -23,15 +23,19 @@ mars_robot:
     loco_right_key: 'd'
     loco_stop_key: ' '
     #Pitch
-    pitch_increase_fast_key: 'h'
-    pitch_increase_slow_key: 'j'
-    pitch_stop_key: 'k'
-    pitch_decrease_slow_key: 'l'
-    pitch_decrease_fast_key: ';'
-    #Dumpa
-    dumpa_extend_key: '7'
-    dumpa_stop_key: '8'
-    dumpa_retract_key: '9'
+    pitch_increase_fast_key: 'z'
+    pitch_increase_slow_key: 'x'
+    pitch_stop_key: 'c'
+    pitch_decrease_slow_key: 'v'
+    pitch_decrease_fast_key: 'b'
+    #Tool
+    tool_extend_key: '4'
+    tool_stop_key: '5'
+    tool_retract_key: '6'
+    #Bucket
+    bucket_extend_key: '7'
+    bucket_stop_key: '8'
+    bucket_retract_key: '9'
     #Start Autonomy
     digging_auto_start: '1'
     dumping_auto_start: '2'
@@ -53,7 +57,7 @@ mars_robot:
     loco_right_speed: 66.67     #turns/s       (Limit: 0-66.67)
     pitch_speed_slow: 1000000        #microsteps/s  (Limit: *set using ticgui)
     pitch_speed_fast: 2000000        #microsteps/s  (Limit: *set using ticgui)
-    dumpa_speed: 127            #unkown        (Limit: 0-127)
+    bucket_speed: 100            #unkown        (Limit: 0-127)
 
     
 

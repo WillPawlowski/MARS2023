@@ -124,7 +124,7 @@ class Digging_Locomotion:
         time.sleep(0.1)
 
         self.odrv1.axis0.controller.input_vel = left_speed
-        self.odrv1.axis1.controller.input_vel = right_speed
+        self.odrv1.axis1.controller.input_vel = -right_speed
     
     #--------------------------------------------------------------------
     # Drives robot in reverse
@@ -152,7 +152,7 @@ class Digging_Locomotion:
         time.sleep(0.1)
 
         self.odrv1.axis0.controller.input_vel = -left_speed
-        self.odrv1.axis1.controller.input_vel = -right_speed
+        self.odrv1.axis1.controller.input_vel = right_speed
     
     #--------------------------------------------------------------------
     # Stops all movement

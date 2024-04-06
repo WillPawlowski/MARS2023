@@ -3,7 +3,7 @@ from json import encoder
 import odrive
 from odrive.enums import *
 import time
-from pynput import keyboard
+#from pynput import keyboard
 
 
 if __name__ == "__main__":
@@ -16,17 +16,17 @@ if __name__ == "__main__":
     odrv0.axis1.requested_state = AXIS_STATE_CLOSED_LOOP_CONTROL
     
     odrv0.axis0.controller.input_vel = 67
-    odrv0.axis1.controller.input_vel = -67
+    #odrv0.axis1.controller.input_vel = -67
 
-    time.sleep(2)
+    time.sleep(1)
 
     odrv0.axis0.controller.input_vel = -67
-    odrv0.axis1.controller.input_vel = 67
+    #odrv0.axis1.controller.input_vel = 67
 
-    time.sleep(2)
+    time.sleep(1)
 
     odrv0.axis0.controller.input_vel = 0
-    odrv0.axis1.controller.input_vel = 0
+    #odrv0.axis1.controller.input_vel = 0
 
 
     print("Ending program.")

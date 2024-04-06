@@ -1,8 +1,30 @@
 obstacle_range: 4.0
 raytrace_range: 3.0
-footprint: [[-0.75, -0.88], [-0.75, 0.88], [0.75, 0.88], [0.75, -0.88]]
+footprint: [[-0.9, -0.25], [-0.9, 0.25], [0, 0.25], [0, -0.25]]
 #robot_radius: ir_of_robot
 inflation_radius: 0.10
+
+plugins:
+    #- {name: static_layer, type: "costmap_2d::StaticLayer"}
+    - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
+    - {name: obstacle_layer, type: "costmap_2d::ObstacleLayer"}
+  #  - {name: voxel_layer, type: "costmap_2d::VoxelLayer"}
+
+inflation_layer:
+  enabled: true
+  cost_scaling_factor: 5
+  inflation_radius: .25
+
+obstacle_layer:
+    observation_sources: lidar_sensor
+    footprint_clearing_enabled: true
+    lidar_sensor: {sensor_frame: laser_frame, data_type: LaserScan, topic: /lidar_scan, marking: true, clearing: true} # UPDATE TO USE POINT CLOUD
+  #  pc_sensor: {sensor_frame: laser_frame, data_type: PointCloud, topic: /merged_cloud, marking: true, clearing: true}
+
+#voxel_layer:
+  #  observation_sources: pc_sensor
+  #  footprint_clearing_enabled: false
+  #  pc_sensor: {sensor_frame: laser_frame, data_type: PointCloud2, topic: /merged_cloud, marking: true, clearing: true}
 
 observation_sources: lidar_sensor
 

@@ -6,6 +6,8 @@ This file houses all of the dumping functionality
 """
 
 import time
+import sys
+
 from roboclaw import Roboclaw
 
 class Dumping:
@@ -13,7 +15,7 @@ class Dumping:
     #---------------------------------------------------------------------
     # Dumping initialization function
     #
-    # Establish the roboclaw connection for the linear actuator
+    # Establish the roboclaw connection for the bucket's linear actuator
     #---------------------------------------------------------------------
     def __init__(self, rc_port):
         try:
@@ -26,23 +28,23 @@ class Dumping:
             print("Unable to find dumping roboclaw")
 
     #--------------------------------------------------------------------
-    # Extend the linear actuator forward for its full length
+    # Extend the bucket linear actuator
     #--------------------------------------------------------------------
-    def actuator_extend(self, speed=127):
+    def bucket_extend(self, speed=100):
         if self.roboclaw != None:
-            self.roboclaw.ForwardM1(128, speed)
+            self.roboclaw.ForwardM1(128, 80)    #CHANGE THIS back to speed when mechanicals reinforce bucket
 
     #--------------------------------------------------------------------
-    # Fully retract the linear actuator
+    # Retract the bucket linear actuator
     #--------------------------------------------------------------------
-    def actuator_retract(self, speed=127):
+    def bucket_retract(self, speed=-100):
         if self.roboclaw != None:
-            self.roboclaw.BackwardM1(128, speed)
+            self.roboclaw.BackwardM1(128, -80)  #CHANGE THIS back to speed when mechanicals reinforce bucket
 
     #--------------------------------------------------------------------
     # Stop the linear actuator
     #--------------------------------------------------------------------
-    def actuator_stop(self):
+    def bucket_stop(self):
         if self.roboclaw != None:
             self.roboclaw.ForwardM1(128, 0)
 
@@ -50,9 +52,9 @@ class Dumping:
     # A full dump algorithm
     #--------------------------------------------------------------------
     def full_dump(self, speed=127):
-        self.actuator_extend(speed)
+        self.bucket_extend(speed)
         time.sleep(10)
-        self.actuator_retract(speed)
+        self.bucket_retract(speed)
         time.sleep(10)
 
     #--------------------------------------------------------------------
@@ -66,6 +68,6 @@ class Dumping:
     # Disables the roboclaw to communicate on the ACM# port
     #--------------------------------------------------------------------
     def disable_roboclaw(self):
-        self.actuator_stop()
+        self.bucket_stop()
         
         time.sleep(0.1)

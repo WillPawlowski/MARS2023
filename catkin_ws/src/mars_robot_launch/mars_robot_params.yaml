@@ -55,9 +55,13 @@ mars_robot:
   motor_speeds:
     loco_left_speed: 66.67      #turns/s       (Limit: 0-66.67)
     loco_right_speed: 66.67     #turns/s       (Limit: 0-66.67)
-    pitch_speed_slow: 1000000        #microsteps/s  (Limit: *set using ticgui)
-    pitch_speed_fast: 2000000        #microsteps/s  (Limit: *set using ticgui)
-    bucket_speed: 100            #unkown        (Limit: 0-127)
+    #pitch_speed_slow: 1000000        #microsteps/s  (Limit: *set using ticgui)
+    #pitch_speed_fast: 2000000        #microsteps/s  (Limit: *set using ticgui)
+
+    pitch_speed_slow: 1600000        #microsteps/s  (Limit: *set using ticgui)
+    pitch_speed_fast: 1800000        #microsteps/s  (Limit: *set using ticgui)
+    bucket_speed: 127                #unkown        (Limit: 0-127)
+    tool_speed: 127                  #unkown        (Limit: 0-127)
 
     
 

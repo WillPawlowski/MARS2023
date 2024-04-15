@@ -37,15 +37,15 @@ if __name__ == '__main__':
             if char.lower() == "q":
                 break
             elif char.lower() == "w":
-                roboclaw.ForwardM1(128, 100)
-                #roboclaw.ForwardM2(0x80, 127)
+                #roboclaw.ForwardM1(128, 100)
+                roboclaw.ForwardM2(0x80, 127)
             elif char.lower() == "s":
-                roboclaw.BackwardM1(128, 100)
-                #roboclaw.BackwardM2(0x80, 127)
-#            elif char.lower() == "x":
-#                roboclaw.ForwardM1(0x80, 0)
+                #roboclaw.BackwardM1(128, 100)
+                roboclaw.ForwardM2(0x80, 126)
+            elif char.lower() == "x":
+                roboclaw.ForwardM1(0x80, 0)
     finally:
-        roboclaw.ForwardM1(128, 0)
-        #roboclaw.ForwardM2(0x80, 0)
+        #roboclaw.ForwardM1(128, 0)
+        roboclaw.ForwardM2(0x80, 0)
         print("------")
     print("Program ending")

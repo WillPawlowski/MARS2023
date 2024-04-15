@@ -21,9 +21,9 @@ class Digging_Locomotion:
     # 
     # Establish the odrive connection for auger
     #---------------------------------------------------------------------
-    #def __init__(self, odrv0_SN, pitch_SN):
-    def __init__(self, odrv0_SN):
-        #self.pitch_serial_num = pitch_SN
+    def __init__(self, odrv0_SN, pitch_SN):
+    #def __init__(self, odrv0_SN):
+        self.pitch_serial_num = pitch_SN
         self.odrv0_serial_num = odrv0_SN
 
         try:
@@ -33,7 +33,7 @@ class Digging_Locomotion:
         except:
             print("Unable to find locomotion odrive")
 
-        #self.pitch_motor_engage()
+        self.pitch_motor_engage()
         self.loco_engage_motors()
         
     #---------------------------------------------------------------------

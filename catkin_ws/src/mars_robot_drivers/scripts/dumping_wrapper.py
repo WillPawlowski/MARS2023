@@ -17,7 +17,8 @@ class Dumping_WrapperROS:
 
         self.dumping = Dumping(rc_port)
         
-        self.speed = rospy.get_param('mars_robot/motor_speeds/bucket_speed')
+        self.bucket_speed = rospy.get_param('mars_robot/motor_speeds/bucket_speed')
+        self.tool_speed = rospy.get_param('mars_robot/motor_speeds/tool_speed')
 
         rospy.Subscriber("main_control", String, self.callback_main)
     
@@ -25,12 +26,18 @@ class Dumping_WrapperROS:
         opcode = msg.data
 
         if opcode == rospy.get_param('/mars_robot/manual_control_keys/bucket_extend_key'):
-            self.dumping.bucket_extend(self.speed)
+            self.dumping.bucket_extend(self.bucket_speed)
         if opcode == rospy.get_param('/mars_robot/manual_control_keys/bucket_stop_key'):
             self.dumping.bucket_stop()
         if opcode == rospy.get_param('/mars_robot/manual_control_keys/bucket_retract_key'):
-            self.dumping.bucket_retract(-1*self.speed)
-
+            self.dumping.bucket_retract(self.bucket_speed)
+        if opcode == rospy.get_param('/mars_robot/manual_control_keys/tool_extend_key'):
+            self.dumping.tool_extend(self.tool_speed)
+        if opcode == rospy.get_param('/mars_robot/manual_control_keys/tool_stop_key'):
+            self.dumping.tool_stop() 
+        if opcode == rospy.get_param('/mars_robot/manual_control_keys/tool_retract_key'):
+            self.dumping.tool_retract(self.tool_speed) 
+                
     def stop(self):
         self.dumping.disable_roboclaw()
     

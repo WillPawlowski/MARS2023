@@ -17,17 +17,17 @@ class Digging_Locomotion_WrapperROS:
 
     def __init__(self):
         #Get driver serial numbers:
-        #pitch_SN = rospy.get_param('/mars_robot/serial_nums/pitch_stepper') #Pitch tic36v4 stepper driver serial number
+        pitch_SN = rospy.get_param('/mars_robot/serial_nums/pitch_stepper') #Pitch tic36v4 stepper driver serial number
         odrv0_SN = rospy.get_param('/mars_robot/serial_nums/loco_odrive') #Locomotion Odrive serial number
 
-        #self.digging_locomotion = Digging_Locomotion(odrv0_SN, pitch_SN)
-        self.digging_locomotion = Digging_Locomotion(odrv0_SN)
+        self.digging_locomotion = Digging_Locomotion(odrv0_SN, pitch_SN)
+        #self.digging_locomotion = Digging_Locomotion(odrv0_SN)
 
         #Get motor speeds:
         self.loco_left_speed = rospy.get_param('/mars_robot/motor_speeds/loco_left_speed')
         self.loco_right_speed = rospy.get_param('/mars_robot/motor_speeds/loco_right_speed')
-        #self.pitch_speed_slow = rospy.get_param('/mars_robot/motor_speeds/pitch_speed_slow')
-        #self.pitch_speed_fast = rospy.get_param('/mars_robot/motor_speeds/pitch_speed_fast')
+        self.pitch_speed_slow = rospy.get_param('/mars_robot/motor_speeds/pitch_speed_slow')
+        self.pitch_speed_fast = rospy.get_param('/mars_robot/motor_speeds/pitch_speed_fast')
 
         self.subscriber = rospy.Subscriber("main_control", String, self.callback_main)
 	    #self.subscriber = rospy.Subscriber("sensor_data", Float32MultiArray, self.callback_sensor)

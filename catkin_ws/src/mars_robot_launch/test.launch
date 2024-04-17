@@ -1,10 +1,11 @@
+<!-- Launch file for testing purposes -->
 <launch>
 
     <!--Load Parameter file-->
     <rosparam command='load' file='$(find mars_robot_launch)/mars_robot_params.yaml'/>
 
     <include file="$(find odrive_ros)/launch/odrive.launch"/>
-    <node name='dumping_node' pkg='mars_robot_drivers' type='dumping_wrapper.py'/>
+    <node name='actuator_node' pkg='mars_robot_drivers' type='actuator_wrapper.py'/>
     <node name='mars_robot_teleop' pkg='mars_robot_teleop' type='mars_robot_teleop.py' output='screen'/>
 
 </launch>

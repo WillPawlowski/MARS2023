@@ -36,6 +36,7 @@ mars_robot:
     bucket_extend_key: '7'
     bucket_stop_key: '8'
     bucket_retract_key: '9'
+    bucket_cycle_key: '0'
     #Start Autonomy
     digging_auto_start: '1'
     dumping_auto_start: '2'

@@ -1,14 +1,18 @@
+<!-- Launch file dedicated to testing SLAM -->
 <launch>
 
+    <!-- ODRIVE FOR ODOMETRY -->
     <include file="$(find odrive_ros)/launch/odrive.launch"/>
+    <!-- RPLIDAR FOR 2D LASER_SCAN-->
     <include file="$(find rplidar_ros)/launch/rplidar_a3.launch"/>
     <!--include file="$(find ox)/online_async.launch"/-->
 
+    <!-- CREATING MODEL OF ROBOT FOR SLAM -->
     <param name="robot_description" command="$(find xacro)/xacro '$(find mars_robot)/description/robot.urdf.xacro'"/>
-
     <node name="robot_state_publisher" pkg="robot_state_publisher" type='robot_state_publisher' output="screen"/>
 
-
+    <!-- NODE TO COMBINE DISTANCE SENSOR AND LIDAR DATA INTO ONE LASER_SCAN/PC2 -->
+    <!-- Also wraps LiDAR data so SLAM no longer complains aobut Laser_Scan size -->
     <!--node pkg="ira_laser_tools" name="laserscan_multi_merger" type="laserscan_multi_merger" output="screen">
         <param name="destination_frame" value="laser"/>
         <param name="cloud_destination_topic" value="/merged_cloud"/>
@@ -22,10 +26,9 @@
         <param name="range_max" value="25.0"/>
 	</node-->
 
+    <!-- SLAM -->
     <node pkg="slam_toolbox" type="async_slam_toolbox_node" name="slam_toolbox" output="screen">
         <rosparam command="load" file="$(find mars_robot)/config/mapper_params_online_async.yaml" />
     </node>
-
-	<!--include file="$(find amcl)/examples/amcl_diff.launch" /-->
 
 </launch>

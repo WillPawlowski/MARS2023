@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-This file houses all of the dumping functionality
+This file houses all of the Roboclaw Actuators functionality
 
 @created: 3-22-2022
 """
@@ -10,10 +10,10 @@ import sys
 
 from roboclaw import Roboclaw
 
-class Dumping:
+class Actuator:
 
     #---------------------------------------------------------------------
-    # Dumping initialization function
+    # Roboclaw actuator initialization function
     #
     # Establish the roboclaw connection for the bucket's linear actuator
     #---------------------------------------------------------------------
@@ -39,7 +39,7 @@ class Dumping:
     #--------------------------------------------------------------------
     def bucket_retract(self, speed=127):
         if self.roboclaw != None:
-            self.roboclaw.ForwardM1(128, 100)  #For some reason the speed has to be left at 100
+            self.roboclaw.ForwardM1(128, 126)  #For some reason the speed has to be left at 100
 
     #--------------------------------------------------------------------
     # Stop the linear actuator
@@ -49,14 +49,16 @@ class Dumping:
             self.roboclaw.ForwardM1(128, 0)
 
     #--------------------------------------------------------------------
-    # A full dump algorithm
+    # A full bucket cycle 
     #--------------------------------------------------------------------
-    def full_dump(self, speed=127):
+    def full_bucket_cycle(self, speed=127):
         self.bucket_extend(speed)
         time.sleep(10)
+        self.bucket_stop()
+        time.sleep(5)
         self.bucket_retract(speed)
         time.sleep(10)
-
+        self.bucket_stop()
 
     #--------------------------------------------------------------------
     # Extend the  tool's linear actuator

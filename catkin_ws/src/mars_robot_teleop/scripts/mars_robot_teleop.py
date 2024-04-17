@@ -42,6 +42,7 @@ instructions = '---------------------------------------------------------\n' \
         '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/bucket_extend_key')) + ':      extend bucket\n' +\
         '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/bucket_stop_key')) + ':      stop bucket\n' +\
         '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/bucket_retract_key')) + ':      retract bucket\n' +\
+        '\t' + str(rospy.get_param('/mars_robot/manual_control_keys/bucket_cycle_key')) + ':      run bucket cycle\n' +\
     'To quit: <CTRL-C>, wait 5 sec., <CTRL-C>'
 
 
